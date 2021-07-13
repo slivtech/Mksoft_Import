@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Mksoft::top_level" title="Mksoft" module="Mksoft_Import" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Mksoft_Import::mksoft_import_mksoftproduct" title="Items" module="Mksoft_Import" sortOrder="10" resource="Magento_Backend::content" parent="Mksoft::top_level" action="mksoft_import/mksoftproduct/index"/>
+        <add id="Mksoft_Import::mksoft_import_log" translate="title" title="Logs" module="Mksoft_Import" sortOrder="20" resource="Magento_Backend::content" parent="Mksoft::top_level" action="mksoft_import/log" />
+    </menu>
+</config>

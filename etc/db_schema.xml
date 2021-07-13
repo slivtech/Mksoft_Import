@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="mksoft_import_mksoftproduct" resource="default" engine="innodb" comment="mksoft_import_mksoftproduct Table">
+		<column xsi:type="smallint" name="mksoftproduct_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="mksoftproduct_id"/>
+		</constraint>
+		<column name="title" nullable="false" xsi:type="varchar" comment="title" length="255"/>
+		<column name="plu" nullable="false" xsi:type="int" comment="plu" identity="false"/>
+		<index referenceId="MKSOFT_IMPORT_MKSOFTPRODUCT_PLU" indexType="btree">
+			<column name="plu"/>
+		</index>
+		<column name="ean" nullable="true" xsi:type="varchar" comment="ean" length="255"/>
+		<column name="old_price" nullable="false" xsi:type="float" comment="old_price" default="0.0"/>
+		<column name="price" nullable="false" xsi:type="float" comment="price"/>
+        <column name="updated_at" on_update="true" xsi:type="timestamp" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated time"/>
+		<column name="entity_ids" nullable="true" xsi:type="text" comment="entity_ids"/>
+	</table>
+</schema>

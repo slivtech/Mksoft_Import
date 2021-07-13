@@ -1,0 +1,22 @@
+{
+    "name": "mksoft/module-import",
+    "description": "Update magento 2 attributes from mksoft",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Lukas Slivka",
+            "email": "slivka.lukas6@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Mksoft\\Import\\": ""
+        }
+    }
+}
